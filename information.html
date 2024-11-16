@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <!-- Box icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      scroll-behavior: smooth;
+      font-family: "poppins", sans-serif;
+    }
+
+    :root {
+      /*it is a global variable that accessed, in every where using this variable name*/
+      --bg-color: #081b29;
+      --second-bg-color: #112e42;
+      --text-color: #ededed;
+      --main-color: #00abf0;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .heading {
+      top: 3rem;
+      position: relative;
+      font-size: 4rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    /* education section design  //////////////////////////////////////////////////////////////////*/
+    .education {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: auto; /**/
+      padding-bottom: 7rem;
+      position: relative;
+    }
+
+    .education .education-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4rem; /*changes*/
+      margin-top: 6rem;
+      flex-direction: column;
+      height: auto;
+      width: 70%;
+    }
+
+
+    .education-row .education-column {
+      flex: 1 1 36rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .education-column .title {
+      position: relative;
+      display: inline-block;
+      font-size: 2.5rem;
+      margin: 22 2 0.5rem 2rem; /*0 0 1.5rem 2rem*/ /*changes*/
+    }
+    .education-column .education-box {
+      position: relative;
+    }
+
+    .education-box .education-content {
+      border-left: 0.2rem solid var(--main-color);
+    }
+    .education-box .education-content::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 2rem;
+      left: -1.1rem;
+      height: 2rem;
+      background: var(--main-color);
+      border-radius: 50%;
+    }
+
+    .education-row .education-content {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .education-content .content {
+      position: relative;
+      padding: 1.5rem;
+      padding-right: 11rem;
+      /* width: 46rem; */
+      border: 0.2rem solid var(--main-color);
+      border-radius: 0.6rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    .education-content .content::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: var(--second-bg-color);
+      z-index: -1;
+      transition: 0.5s;
+    }
+    .education-content .content:hover::before {
+      width: 100%;
+    }
+
+    .education-content .content .year {
+      font-size: 1.5rem;
+      color: var(--main-color);
+      padding-bottom: 0.5rem;
+    }
+
+    .education-content .content .year i {
+      padding-right: 0.5rem;
+    }
+
+    .education-content .content h3 {
+      font-size: 2rem;
+    }
+
+    .education-content .content p {
+      font-size: 1.3rem;
+    }
+
+    .education .heading span{
+      color: var(--main-color);
+    }
+
+    /* #vishal .title{
+    font-size: 2rem;
+}
+#vishal p{
+    font-size: 1.2rem;
+} */
+
+  .education-column #vishu{
+    margin-top: 3rem;
+  }
+
+  .education .education-row #csr{
+    margin-top: 3rem;
+  }
+
+
+
+  .animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
+  }
+  .education .animate{
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(0.4s *var(--i));
+  }
+  .education .education-box .animate.scroll{
+    width:105%;
+}
+  @keyframes showRight{
+    100%{
+      width: 0;
+    }
+  }
+
+  </style>
+  <body>
+    <!-- education section design  -->
+    <section class="education" id="education">
+      <h2 class="heading">Ab<span>ouT</span> <span class="animate scroll" style="--i:1;"></span></h2>
+
+      <div class="education-row">
+        <div class="education-column">
+          <h3 class="title">Activities <span class="animate scroll" style="--i:2;"></span></h3>
+          <div class="education-box">
+            <div class="education-content">
+              <div class="content">
+                <div class="year"><i class="bx bxs-calendar"></i>Still Now</div>
+                <p>Active participant in fresher party (dpg degree college) </p>
+              </div>
+            </div>
+
+            <div class="education-content">
+              <div class="content">
+                <p>Attended more than 20 seminar on technologies</p>
+                </div>
+            </div>
+
+
+            <div class="education-content">
+              <div class="content">
+                <p>Volunteer in fresher party in college</p>
+              </div>
+            </div>
+
+            <div class="education-content">
+              <div class="content">
+                <p>Sports</p>
+              </div>
+            </div>
+            
+          <span class="animate scroll" style="--i:3;"></span>
+          </div>
+        </div>
+
+
+
+        <div class="education-column" id="csr">
+          <h3 class="title">Interests  <span class="animate scroll" style="--i:4;"></span></h3>
+          <div class="education-box">
+            <div class="education-content">
+              <div class="content">
+                <!-- <div class="year"><i class="bx bxs-calendar"></i>Still Now</div> -->
+                <p>Innovation</p>
+              </div>
+            </div>
+            
+            <div class="education-content">
+              <div class="content">
+                <p>Exploring new technologies</p>
+                </div>
+            </div>
+
+
+            <div class="education-content">
+              <div class="content">
+                <p>Cricket match</p>
+              </div>
+            </div>
+
+            <div class="education-content">
+              <div class="content">
+                <p>Learning new languages</p>
+              </div>
+            </div>
+
+            <div class="education-content">
+              <div class="content">
+                <p>Cooking</p>
+              </div>
+            </div>
+          <span class="animate scroll" style="--i:5;"></span>
+          </div>
+        </div>
+
+
+
+
+        <div class="education-column" id="vishal">
+          <h3 class="title">Personal Details  <span class="animate scroll" style="--i:6;"></span></h3>
+          <div class="education-box">
+            <div class="education-content">
+              <div class="content">
+                <div class="year"><i class='bx bxs-cake'></i>19/04/2001</div>
+                <p>Date of Birth</p>
+              </div>
+            </div>
+
+            <div class="education-content">
+              <div class="content">
+                <!-- <div class="year"><i class="bx bxs-calendar"></i>2023-04</div> -->
+                <h3>Nationality</h3>
+                <p>Indian</p>
+              </div>
+            </div>
+
+            <div class="education-content">
+              <div class="content">
+                <!-- <div class="year"><i class="bx bxs-calendar"></i>2023-04</div> -->
+                <h3>Merital status</h3>
+                <p>Single</p>
+              </div>
+            </div>
+          
+            <span class="animate scroll" style="--i:7;"></span>
+          </div>
+
+          <h3 class="title"  id="vishu">Languages  <span class="animate scroll" style="--i:8;"></span></h3>
+          <div class="education-box">
+            <div class="education-content">
+              <div class="content">
+                <div class="year"><i class="bx bxs-calendar"></i>Now</div>
+                <p>Hindi / English</p>
+              </div>
+            </div>
+          <span class="animate scroll" style="--i:9;"></span>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
